@@ -5,7 +5,7 @@ body {
     background-color: #E9E3F2;
 }
 
-#menu-icon{
+#menu-icon {
     display: none;
 }
 
@@ -87,7 +87,7 @@ header::after {
     color: #63488c;
 }
 
-/* Menu burger (caché par défaut) */
+/* Menu burger */
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -150,39 +150,26 @@ header::after {
     .nav-menu {
         display: none;
     }
-    #menu-icon {
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-    }
-    /* Style du menu mobile (initialement caché) */
-    #mobile-menu {
-        display: none; /* Cache le menu par défaut */
-        position: absolute;
-        top: 50px; /* Ajuste selon la position du menu */
-        right: 0;
-        background-color: #D1C7E0; /* Choisis la couleur de fond */
-        width: 250px; /* Largeur du menu */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Affiche le menu lorsque la classe 'show' est ajoutée */
-    #mobile-menu.show {
-        display: block; /* Affiche le menu */
-    }
-
-    /* Style du bouton du menu burger */
-
-    #menu-icon .line {
-        width: 100%;
-        height: 4px;
-        background-color: #78698f;
-    }
 
     .menu-icon {
         display: flex;
+    }
+
+    .menu-icon .line {
+        background-color: #78698f;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #D1C7E0;
+        width: 250px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu.show {
+        display: block;
     }
 }

@@ -1,28 +1,36 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "build": "echo 'Nothing to build'",
-    "dev": "netlify dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fanny-petitjean/portfolio.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fanny-petitjean/portfolio/issues"
-  },
-  "homepage": "https://github.com/fanny-petitjean/portfolio#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "serverless-http": "^3.2.0"
+    "cra-template": "1.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
