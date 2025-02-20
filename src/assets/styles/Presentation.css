@@ -1,0 +1,79 @@
+.presentation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.presentation-box {
+  display: flex !important; /* Force flexbox */
+  flex-direction: row !important; /* Force l'affichage horizontal */
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: left;
+  flex-wrap: nowrap; /* Empêche la ligne de se casser */
+}
+
+.image-container {
+  width: 40%;
+  max-width: 250px;
+  flex-shrink: 0; /* Empêche l'image de se réduire */
+  display: flex;
+  justify-content: center;
+}
+
+.presentation-image {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.presentation-image:hover {
+  transform: scale(1.05);
+}
+
+.text-container {
+  width: 55%;
+  padding: 16px;
+  text-align: left;
+}
+
+/* 📱 Responsive */
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .presentation-box {
+    flex-direction: column !important; /* Empile l'image et le texte */
+    flex-wrap: nowrap; /* Plus de wrap pour éviter des soucis d'espacement */
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte */
+  }
+
+  .image-container {
+    width: 80%;
+    max-width: 200px;
+    margin-bottom: 16px; /* Espacement entre l'image et le texte */
+  }
+
+  .presentation-image {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .text-container {
+    width: 90%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,283 @@
+/* 🎨 Style global */
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #c4a1d2, #8b70b4) !important; /* Violet pastel */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* Changement de police */
+  overflow: hidden;
+  margin: 0;
+}
+
+/* 🎭 Effet carte en verre */
+.App-header {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14px + 2vmin);
+  transition: padding 0.3s ease-in-out;
+}
+
+/* 🚀 Logo animé */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  filter: drop-shadow(0px 0px 10px rgba(58, 141, 153, 0.5));
+}
+
+.App-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0px 0px 20px rgba(58, 141, 153, 0.8));
+}
+
+/* 🔄 Animation fluide du logo */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ✨ Effet néon sur les liens */
+.App-link {
+  color: #3a8d99;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.App-link:hover {
+  color: #0f4c5c;
+  text-shadow: 0px 0px 10px rgba(58, 141, 153, 0.8);
+}
+
+/* 🌀 Animation d’entrée fluide */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive amélioré */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 30px;
+    font-size: calc(12px + 2vmin);
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+}
+
+/* Global body */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Police Poppins */
+  background-color: #f7f7f7;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #a69ad6; /* Violet pastel */
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Trait sous le menu centré */
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: #5b4b82; /* Séparation plus foncée */
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo:hover {
+  color: #0f4c5c;
+}
+
+/* Menu normal */
+.nav-menu {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-list li {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.nav-list li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 2px;
+  background-color: #5b4b82; /* Séparation plus foncée */
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+  color: #f4d1e0;
+}
+
+/* Menu burger */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-icon .line {
+  height: 3px;
+  width: 100%;
+  background-color: #5b4b82; /* Légèrement plus foncé pour ressortir */
+  border-radius: 2px;
+}
+
+/* Menu mobile */
+.mobile-menu {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background-color: #a69ad6; /* Violet pastel */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  display: none;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  display: block;
+  padding: 5px 10px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.mobile-menu ul li a:hover {
+  background-color: #f4d1e0;
+  color: #3a1d7a;
+}
+
+/* Afficher le menu si actif */
+.mobile-menu.show {
+  display: block;
+}
+
+.App-content.blur {
+  filter: blur(2px); /* Applique un flou */
+  pointer-events: none; /* Désactive les interactions avec le contenu en arrière-plan */
+}
+
+
+/* Afficher le menu burger uniquement sur les petits écrans */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .menu-icon .line {
+    background-color: #5b4b82;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #a69ad6; /* Violet pastel */
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu.show {
+    display: block;
+    backdrop-filter: blur(5px); /* Flou sur l'arrière-plan lorsque le menu est ouvert */
+  }
+}

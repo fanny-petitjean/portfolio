@@ -1,0 +1,67 @@
+.presentation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+  
+.presentation-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+  
+.presentation-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #5a5a5a;
+}
+  
+.experience-carousel {
+    max-width: 800px;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+}
+
+.logo-image {
+    width: 100px; 
+    height: auto;
+}
+
+.experience-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #333; /* Texte plus lisible sur fond clair */
+}
+/* Change la couleur des flèches */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(0%); /* Rends les flèches sombres */
+}
+
+
+
+.carousel-indicators {
+    bottom: -30px; /* Ajuste la position pour qu'ils soient sous le texte */
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%; 
+    background-color: #ccc;
+}
+

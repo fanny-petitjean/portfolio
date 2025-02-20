@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
-import './Header.css'; // Pour inclure ton CSS
+import '../assets/styles/Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(prevState => !prevState);
+    setMenuOpen(!menuOpen);
+
+    // Ajouter ou retirer la classe 'blur' sur le contenu principal
+    const content = document.querySelector('.App-content');
+    content.classList.toggle('blur', !menuOpen);  // Applique le flou si le menu est ouvert
   };
 
   return (
     <header>
-      {/* Logo */}
       <div className="logo">Fanny</div>
 
       {/* Menu principal */}
-      <nav className={`nav-menu ${menuOpen ? 'show' : ''}`}>
+      <nav className="nav-menu">
         <ul className="nav-list">
           <li><a href="/">Accueil</a></li>
           <li><a href="/entreprise">Entreprise</a></li>
@@ -25,15 +28,15 @@ const Header = () => {
         </ul>
       </nav>
 
-      {/* Menu Burger */}
-      <div className="menu-icon" id="menu-icon" onClick={toggleMenu}>
+      {/* Menu burger */}
+      <div className="menu-icon" onClick={toggleMenu}>
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
       </div>
 
       {/* Menu mobile */}
-      <nav className={`mobile-menu ${menuOpen ? 'show' : ''}`} id="mobile-menu">
+      <nav className={`mobile-menu ${menuOpen ? 'show' : ''}`}>
         <ul>
           <li><a href="/">Accueil</a></li>
           <li><a href="/entreprise">Entreprise</a></li>
