@@ -1,7 +1,6 @@
 import React from 'react';
 import './assets/styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Header from './pages/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Accueil from './pages/Accueil';
@@ -10,6 +9,7 @@ import Ecole from './pages/Ecole';
 import Passion from './pages/Passion';
 import Competences from './pages/Competences';
 import Contact from './pages/Contact';
+import EntrepriseDetail from './pages/components/EntrepriseDetail';
 
 const App = () => {
   return (
@@ -19,6 +19,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Accueil />} />
+        <Route path="/entreprise/:id" element={<EntrepriseDetail />} />
         <Route path="/entreprise" element={<Entreprise />} />
         <Route path="/ecole" element={<Ecole />} />
         <Route path="/passion" element={<Passion />} />

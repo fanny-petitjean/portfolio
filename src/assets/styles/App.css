@@ -241,18 +241,16 @@ header::after {
   color: #3a1d7a;
 }
 
-/* Afficher le menu si actif */
 .mobile-menu.show {
   display: block;
 }
 
 .App-content.blur {
-  filter: blur(2px); /* Applique un flou */
-  pointer-events: none; /* Désactive les interactions avec le contenu en arrière-plan */
+  filter: blur(2px); 
+  pointer-events: none;
 }
 
 
-/* Afficher le menu burger uniquement sur les petits écrans */
 @media screen and (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -271,13 +269,13 @@ header::after {
     position: absolute;
     top: 50px;
     right: 0;
-    background-color: #a69ad6; /* Violet pastel */
+    background-color: #a69ad6; 
     width: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .mobile-menu.show {
     display: block;
-    backdrop-filter: blur(5px); /* Flou sur l'arrière-plan lorsque le menu est ouvert */
+    backdrop-filter: blur(5px);
   }
 }

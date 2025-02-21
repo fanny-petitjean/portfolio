@@ -4,8 +4,8 @@ import photo from '../../assets/images/photo.webp'; // Importation de l'image
 
 const Presentation = () => {
     return (
-      <div className="presentation-container">
-        <div className="presentation-box">
+      <div className="presentation-container-presentation">
+        <div className="presentation-box-presentation">
           <div className="image-container">
             <img 
               src={photo}

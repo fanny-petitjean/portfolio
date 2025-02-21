@@ -1,29 +1,33 @@
-.presentation-container {
+.presentation-container, .presentation-container-presentation {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
     padding: 20px;
+    font-family: 'Lora', sans-serif !important; 
 }
-  
-.presentation-box {
+
+
+.presentation-box, .presentation-box-presentation {
     background: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 900px;
     width: 100%;
-    text-align: center;
+    text-align: center; 
+    margin: 20px 0;
 }
-  
+
 .presentation-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #5a5a5a;
+    text-align: center; 
 }
-  
+
 .experience-carousel {
     max-width: 800px;
     width: 100%;
@@ -34,6 +38,7 @@
     justify-content: center;
     align-items: center;
     height: 100px; 
+    margin-bottom: 20px; 
 }
 
 .logo-image {
@@ -44,18 +49,16 @@
 .experience-text {
     text-align: center;
     margin-top: 10px;
-    color: #333; /* Texte plus lisible sur fond clair */
+    color: #333; 
 }
-/* Change la couleur des flèches */
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: invert(0%); /* Rends les flèches sombres */
+    filter: invert(0%); 
 }
 
-
-
 .carousel-indicators {
-    bottom: -30px; /* Ajuste la position pour qu'ils soient sous le texte */
+    bottom: -30px; 
 }
 
 .carousel-indicators [data-bs-target] {
@@ -65,3 +68,42 @@
     background-color: #ccc;
 }
 
+/* Mise en page pour les grands écrans (écrans > 1024px) */
+@media screen and (min-width: 1024px) {
+    .presentation-container, .presentation-container-presentation {
+        flex-direction: column; /* Disposition verticale pour les grands écrans */
+        align-items: center; /* Centrer tout le contenu */
+        justify-content: flex-start; /* Justifier le contenu vers le haut */
+    }
+
+    /* Empiler les cards les unes sous les autres */
+    .presentation-box, .presentation-box-presentation {
+        max-width: 100%; /* Elargir la box de présentation */
+        margin-top: 20px; /* Ajout d'espace entre chaque card */
+    }
+
+    .presentation-title {
+        margin-top: 0; /* Enlever la marge en haut du titre */
+    }
+
+    .experience-carousel {
+        margin-top: 20px; /* Ajouter un espacement au-dessus du carousel */
+    }
+
+
+    .logo-container,
+    .experience-text {
+        margin-bottom: 20px; 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .presentation-container, .presentation-container-presentation {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .presentation-box, .presentation-box-presentation {
+        max-width: 100%;
+    }
+}

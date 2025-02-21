@@ -1,4 +1,5 @@
-.presentation-container {
+/* Container principal de présentation */
+.presentation-container, .presentation-container-presentation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,11 +7,12 @@
   padding-bottom: 10px;
 }
 
+/* Conteneur de la présentation (ajustement pour les grands écrans) */
 .presentation-box {
-  display: flex !important; /* Force flexbox */
-  flex-direction: row !important; /* Force l'affichage horizontal */
-  align-items: center;
-  justify-content: space-between;
+  display: flex !important;
+  flex-direction: column; /* Passage à une disposition verticale par défaut */
+  align-items: center; /* Centrer les éléments horizontalement */
+  justify-content: center;
   width: 98%;
   background: rgba(255, 255, 255, 0.85);
   padding: 10px;
@@ -18,22 +20,38 @@
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   text-align: left;
-  flex-wrap: nowrap; /* Empêche la ligne de se casser */
+  flex-wrap: nowrap;
+}
+.presentation-box-presentation {
+  display: flex !important;
+  flex-direction: row; /* Passage à une disposition verticale par défaut */
+  align-items: center; /* Centrer les éléments horizontalement */
+  justify-content: center;
+  width: 98%;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: left;
+  flex-wrap: nowrap;
 }
 
 .image-container {
-  width: 40%;
-  max-width: 250px;
-  flex-shrink: 0; /* Empêche l'image de se réduire */
+  width: 80%; 
+  max-width: 300px; 
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
-}
+  margin-bottom: 16px;
+} 
 
+/* Image de présentation */
 .presentation-image {
   width: 100%;
   height: auto;
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   object-fit: cover;
@@ -44,27 +62,43 @@
   transform: scale(1.05);
 }
 
+/* Conteneur pour le texte */
 .text-container {
-  width: 55%;
+  width: 90%; /* Ajuste la largeur pour l'espace du texte */
   padding: 16px;
-  text-align: left;
+  text-align: center; /* Centrer le texte */
 }
 
-/* 📱 Responsive */
-/* 📱 Responsive */
+/* Sections spécifiques (école par exemple) */
+.text-container-school {
+  padding: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #a67cca2c;
+}
+
+.text-container-school p, .text-container-school h5 {
+  color: #401e62bb;
+}
+
+/* Dernière section sans bordure */
+.text-container-school:last-child {
+  border-bottom: none;
+}
+
+/* 📱 Responsive : Affichage sur petits écrans */
 @media (max-width: 768px) {
-  .presentation-box {
+  .presentation-box, .presentation-box-presentation {
     flex-direction: column !important; /* Empile l'image et le texte */
-    flex-wrap: nowrap; /* Plus de wrap pour éviter des soucis d'espacement */
-    align-items: center; /* Centre horizontalement */
-    justify-content: center; /* Centre verticalement */
-    text-align: center; /* Centre le texte */
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Centrer le texte */
   }
 
   .image-container {
     width: 80%;
     max-width: 200px;
-    margin-bottom: 16px; /* Espacement entre l'image et le texte */
+    margin-bottom: 16px;
   }
 
   .presentation-image {

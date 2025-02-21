@@ -1,0 +1,21 @@
+.card-img-top {
+    height: 80px; /* Ajuste la hauteur selon ton besoin */
+    width: auto; /* Garde les proportions */
+    object-fit: contain; /* Pour éviter que l’image soit coupée */
+    margin: 10px auto; /* Centre l’image */
+    display: block;
+  }
+  .entreprise-box {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .clickable-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .clickable-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
