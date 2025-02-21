@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../assets/styles/Presentation.css';
-import photo from '../../assets/images/photo.webp'; // Importation de l'image
 
 const ResumeCompetences = () => {
     return (

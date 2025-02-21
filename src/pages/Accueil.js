@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../assets/styles/Accueil.css';
 import Presentation from './components/Presentation.js';
 import ResumeEcole from './components/ResumeEcole.js';
