@@ -1,12 +1,15 @@
 import React from 'react';
-import '../../assets/styles/Presentation.css';
+import '../../assets/styles/PresentationResume.css';
 import photo from '../../assets/images/photo.webp'; // Importation de l'image
+import {useNavigate } from 'react-router-dom';
 
 const Presentation = () => {
+    const navigate = useNavigate();
+  
     return (
       <div className="presentation-container-presentation">
         <div className="presentation-box-presentation">
-          <div className="image-container">
+          <div className="image-container" onClick={(e) => { e.preventDefault(); navigate('/presentation'); }}>
             <img 
               src={photo}
               alt="Présentation" 

@@ -44,6 +44,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
+  cursor: pointer;
 } 
 
 /* Image de présentation */
@@ -56,10 +57,14 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer; /* Ajoute le curseur en mode pointer */
+
 }
 
 .presentation-image:hover {
   transform: scale(1.05);
+  cursor: pointer; /* Ajoute le curseur en mode pointer */
+
 }
 
 /* Conteneur pour le texte */

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import '../../assets/styles/ResumeEntreprise.css';
+import {useNavigate } from 'react-router-dom';
 
 // Importation des images des expériences
 import entreprise1 from '../../assets/images/cgi.jpg';
@@ -14,14 +15,16 @@ const ResumeEntreprise = () => {
     setIndex(selectedIndex);
   };
 
+  const navigate = useNavigate();
+  
   return (
     <div className="presentation-container">
       <div className="presentation-box">
         <h2 className="presentation-title">Mes Expériences en Entreprise</h2>
         
         <Carousel data-bs-theme="dark" activeIndex={index} onSelect={handleSelect} className="experience-carousel">
-          <Carousel.Item>
-            <div className="logo-container">
+          <Carousel.Item >
+            <div className="logo-container" onClick={(e) => { e.preventDefault(); navigate('/entreprise/cgi'); }}>
               <img className="logo-image" src={entreprise1} alt="Première entreprise" />
             </div>
             <div className="experience-text">
@@ -31,7 +34,7 @@ const ResumeEntreprise = () => {
           </Carousel.Item>
 
           <Carousel.Item>
-            <div className="logo-container">
+            <div className="logo-container"  onClick={(e) => { e.preventDefault(); navigate('/entreprise/infolien'); }}>
               <img className="logo-image" src={entreprise2} alt="Deuxième entreprise" />
             </div>
             <div className="experience-text">
@@ -41,7 +44,7 @@ const ResumeEntreprise = () => {
           </Carousel.Item>
 
           <Carousel.Item>
-            <div className="logo-container">
+            <div className="logo-container" onClick={(e) => { e.preventDefault(); navigate('/entreprise/caisseEpargne'); }}>
               <img className="logo-image" src={entreprise3} alt="Troisième entreprise" />
             </div>
             <div className="experience-text">

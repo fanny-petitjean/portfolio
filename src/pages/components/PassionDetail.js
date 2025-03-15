@@ -26,7 +26,7 @@ const entreprises = {
   }
 };
 
-const EntrepriseDetail = () => {
+const PassionDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const entreprise = entreprises[id];
@@ -63,4 +63,4 @@ const EntrepriseDetail = () => {
   );
 };
 
-export default EntrepriseDetail;
+export default PassionDetail;

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/Presentation.css';
+import '../../assets/styles/PresentationResume.css';
 
 const ResumeEcole = () => {
     return (
@@ -18,7 +18,7 @@ const ResumeEcole = () => {
           <div className="text-container-school">
             <h3>Baccalauréat Scientifique</h3>
             <h5>Mention Très Bien</h5>
-            <p className="presentation-text">2020 : Lycée Joseph Valloy, Lodève (34700)</p>
+            <p className="presentation-text">2020 : Lycée Joseph Vallot, Lodève (34700)</p>
           </div>
         </div>
         

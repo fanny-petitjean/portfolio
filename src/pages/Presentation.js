@@ -1,8 +1,9 @@
 import React from 'react';
 import '../assets/styles/Accueil.css';
+import ResumeCompetences from './components/ResumeCompetences.js';
 
 
-const Ecole = () => {
+const Presentation = () => {
   
 
   return (
@@ -36,4 +37,4 @@ const Ecole = () => {
   );
 };
 
-export default Ecole;
+export default Presentation;

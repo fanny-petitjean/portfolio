@@ -1,0 +1,122 @@
+/* Conteneur principal qui prend toute la largeur de la page */
+.entreprise-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  font-family: 'Lora', sans-serif; 
+}
+
+/* Bouton sous forme de lien */
+.back-link {
+  font-family: 'Lora', sans-serif; 
+  display: inline-block;
+  color: #d2d1d1;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.back-link:hover {
+  color: #5548d4;
+  text-decoration: underline;
+}
+
+/* Section supérieure (image, titre, description) */
+.entreprise-header {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.presentation-image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+}
+
+.entreprise-header h3 {
+  font-size: 28px;
+  color: #5a5a5a;
+  margin-bottom: 10px;
+}
+
+.entreprise-header p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Ligne de séparation */
+.separator {
+  width: 80%;
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+/* Liste des détails */
+.entreprise-list {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.entreprise-list li {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #401e62bb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lora', sans-serif; 
+  min-width: 200px;
+  flex: 1;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .entreprise-header h3 {
+    font-size: 24px;
+  }
+
+  .entreprise-header p {
+    font-size: 16px;
+  }
+
+  .presentation-image {
+    width: 150px;
+  }
+
+  .entreprise-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .entreprise-list li {
+    font-size: 16px;
+    width: 90%;
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/Presentation.css';
+import '../../assets/styles/PresentationResume.css';
 
 const ResumeCompetences = () => {
     return (
